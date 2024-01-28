@@ -1055,6 +1055,87 @@ export const demoRoutes:Array<RouteRecordRaw> = [
 	}
 ]
 
+export const kengRoutes:Array<RouteRecordRaw> = [
+	{
+		path: '/keng',
+		name: 'Keng',
+		component: () => import('/@/layout/routerView/parent.vue'),
+		redirect: '/keng/user',
+		meta: {
+			title: 'Keng',
+			isLink: '',
+			isHide: false,
+			isKeepAlive: true,
+			isAffix: false,
+			isIframe: false,
+			roles: ['admin'],
+			icon: 'iconfont icon-dongtai',
+		},
+		children:[
+			{
+				path: '/keng/user',
+				name: 'kengUser',
+				component: () => import('/@/views/keng/user/index.vue'),
+				meta: {
+					title: 'User',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin'],
+					icon: 'iconfont icon-icon-',
+				},
+			},
+			{
+				path: '/keng/group',
+				name: 'kengGroup',
+				component: () => import('/@/views/keng/user/index.vue'),
+				meta: {
+					title: 'Group',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin'],
+					icon: 'iconfont icon-neiqianshujuchucun',
+				},
+			},
+			{
+				path: '/keng/spouse',
+				name: 'kengSpouse',
+				component: () => import('/@/views/keng/user/index.vue'),
+				meta: {
+					title: 'Spouse',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin'],
+					icon: 'iconfont icon-zujian',
+				},
+			},
+			{
+				path: '/keng/note',
+				name: 'kengNote',
+				component: () => import('/@/views/keng/user/index.vue'),
+				meta: {
+					title: 'Note',
+					isLink: '',
+					isHide: false,
+					isKeepAlive: true,
+					isAffix: false,
+					isIframe: false,
+					roles: ['admin'],
+					icon: 'iconfont icon-biaodan',
+				},
+			}
+		]
+	}
+]
+
 /**
  * 定义404、401界面
  * @link 参考：https://next.router.vuejs.org/zh/guide/essentials/history-mode.html#netlify
