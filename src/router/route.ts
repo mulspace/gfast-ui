@@ -1120,7 +1120,7 @@ export const kengRoutes:Array<RouteRecordRaw> = [
 			{
 				path: '/keng/note',
 				name: 'kengNote',
-				component: () => import('/@/views/keng/user/index.vue'),
+				component: () => import('/@/views/keng/note/index.vue'),
 				meta: {
 					title: 'Note',
 					isLink: '',
